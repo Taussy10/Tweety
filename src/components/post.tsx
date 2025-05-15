@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
-const Index = () => {
+const Post = () => {
   return (
     <View>
-      <Text>Index</Text>
+      <Text>Post</Text>
     </View>
   )
 }
 
-export default Index
+export default Post

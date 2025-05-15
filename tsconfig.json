@@ -6,7 +6,20 @@
     "baseUrl": ".",
     "paths": {
       "~/*": [
-        "*"
+
+        // ~/ means ./* 
+        // firstly what does ./* means ? 
+        // know first ./ means root directory then 
+        // ./* means all directory/files inside root directory 
+   
+          "./*"
+      ],
+      "@/*":[
+        // firstly what does src/* means
+        // firstly src/* means all the directoires inside src 
+        // you don't have to write like ./src instead write /components 
+        "src/*"
+      
       ]
     }
   },

@@ -1,19 +1,12 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
+import { View, Text } from 'react-native'
 import React from 'react'
-import Post from '@/components/post'
-import icon from '~/assets/icon.png'
+import PostListItems from '../components/post-list-items'
 
 const Index = () => {
   return (
-    <View>
-      {/* <Text>Index</Text>
-    
-     
-      <Image source={require("../../assets/icon.png")}/> */}
-         <Image
-          className=' size-14'
-         source={require(icon)}/>
-      <Post />
+    <View className='  flex-1  bg-green-300 '>
+      <Text className='  text-2xl '>Hello</Text>
+      <PostListItems />
     </View>
   )
 }

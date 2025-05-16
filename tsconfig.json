@@ -6,28 +6,34 @@
     "baseUrl": ".",
     "paths": {
       "~/*": [
+        // ~/ means ./*
+        // firstly what does ./* means ?
+        // know first ./ means root directory then
+        // ./* means all directory/files inside root directory
+        // will use this for interacting with root directory files such icon.png
+        // other wise I've to go from assets
+        // going out of app directory then src then going to assets then png
+        // '../../assets/icon.png'
+        // now by ~
+        // "~/assets/icon.png"
+        "./*"
 
-        // ~/ means ./* 
-        // firstly what does ./* means ? 
-        // know first ./ means root directory then 
-        // ./* means all directory/files inside root directory 
-   
-          "./*"
+        // one more things
+        // this won't for
+        // const icon = '~/assets/icon.png'
+        // then in  source={require(icon)}
+        // you have to write full path in require:
+        //    source={require('~/assets/icon.png')}/>
       ],
-      "@/*":[
+      "@/*": [
         // firstly what does src/* means
-        // firstly src/* means all the directoires inside src 
-        // you don't have to write like ./src instead write /components 
+        // firstly src/* means all the directoires inside src
+        // you don't have to write like ./src instead write /components
+
+        // will use this for interacting with src directory files/folders
         "src/*"
-      
       ]
     }
   },
-  "include": [
-    "**/*.ts",
-    "**/*.tsx",
-    ".expo/types/**/*.ts",
-    "expo-env.d.ts",
-    "nativewind-env.d.ts"
-  ]
+  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts", "nativewind-env.d.ts"]
 }
